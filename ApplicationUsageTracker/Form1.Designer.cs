@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -70,7 +68,7 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pieChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.mainPanel.SuspendLayout();
             this.pnlBody.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -87,7 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTop1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.pnlHead.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pieChart)).BeginInit();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -421,7 +419,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.chart1);
+            this.tabPage2.Controls.Add(this.pieChart);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -490,26 +488,17 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // chart1
+            // pieChart
             // 
-            chartArea1.BackColor = System.Drawing.Color.Black;
-            chartArea1.BackSecondaryColor = System.Drawing.Color.Black;
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.pieChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(231, 35);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(300, 300);
-            this.chart1.TabIndex = 8;
-            this.chart1.Text = "chart1";
-            title1.Name = "Title1";
-            this.chart1.Titles.Add(title1);
+            this.pieChart.Legends.Add(legend1);
+            this.pieChart.Location = new System.Drawing.Point(294, 34);
+            this.pieChart.Name = "pieChart";
+            this.pieChart.Size = new System.Drawing.Size(300, 190);
+            this.pieChart.TabIndex = 8;
+            this.pieChart.Text = "chart1";
             // 
             // Form1
             // 
@@ -546,7 +535,7 @@
             this.tabPage2.PerformLayout();
             this.pnlHead.ResumeLayout(false);
             this.pnlHead.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pieChart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -590,7 +579,7 @@
         private System.Windows.Forms.Label lblHours1;
         private System.Windows.Forms.Label lblAppName1;
         private System.Windows.Forms.PictureBox picBoxTop1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart pieChart;
     }
 }
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Data.OleDb;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ApplicationUsageTracker
 {
@@ -95,13 +96,52 @@ namespace ApplicationUsageTracker
 
            
             //Pie chart summary
-            chart1.Titles.Add("Time Spent on Device VS. Your Rest/Sleep");
-            chart1.Series.Add("sleep");
-            chart1.Series.Add("s1");
-      
-            chart1.Series["sleep"].Points.AddXY("Sleep","12");
-            chart1.Series["s1"].Points.AddXY("Facebook", "12");
-           
+            pieChart.Titles.Add("Time Spent on Device VS. Your Rest/Sleep");
+            pieChart.Series.Add("s1");
+            pieChart.Series["s1"].ChartType = SeriesChartType.Pie;
+            pieChart.Series["s1"].Color = Color.FromArgb(5, 100, 146);
+            
+
+
+
+            //*****UPON LOAD: RETRIEVE DATA FROM DATABASE
+            //Retrive data to be inserted
+            List<string> listProcess = new List<string>();
+            List<double> listTimeAmount= new List<double>();
+
+            TextBox txtProcess1 = new TextBox();
+            int i1 = 0;
+
+            con.Open();
+            OleDbCommand cmd1 = con.CreateCommand();
+            cmd1.CommandType = CommandType.Text;
+
+            cmd1.CommandText = "select * from tblProcess where Time_Amount is not null";
+            OleDbDataReader dr1 = cmd1.ExecuteReader();
+
+
+
+            while (dr1.Read())
+            {
+               
+
+
+                    txtProcess1.Text = dr1["Process"].ToString();
+                    string timeAmt = dr1["Time_Amount"].ToString();
+
+
+
+                    listProcess.Add(txtProcess1.Text);
+                    listTimeAmount.Add(Double.Parse(timeAmt));
+
+
+                   // pieChart.Series["s1"].Points.AddXY("Facebook", "12");
+                    pieChart.Series["s1"].Points.AddXY(listProcess[i1], listTimeAmount[i1]);
+
+                    i1++;
+                
+            }
+            con.Close();
 
         }
 
