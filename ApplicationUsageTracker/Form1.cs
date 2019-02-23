@@ -104,7 +104,7 @@ namespace ApplicationUsageTracker
 
 
 
-            //*****UPON LOAD: RETRIEVE DATA FROM DATABASE
+            //*****UPON LOAD: RETRIEVE DATA FROM DATABASE LAHAT
             //Retrive data to be inserted
             List<string> listProcess = new List<string>();
             List<double> listTimeAmount= new List<double>();
@@ -135,14 +135,30 @@ namespace ApplicationUsageTracker
                     listTimeAmount.Add(Double.Parse(timeAmt));
 
 
-                   // pieChart.Series["s1"].Points.AddXY("Facebook", "12");
-                    pieChart.Series["s1"].Points.AddXY(listProcess[i1], listTimeAmount[i1]);
+                   // pieChart initialize loop
+                    pieChart.Series["s1"].Points.AddXY(listProcess[i1], Math.Round(((listTimeAmount[i1]/24)*100),1));
+                    pieChart.Series["s1"].IsValueShownAsLabel = true;
+                    pieChart.Series["s1"].LabelBackColor = Color.FromArgb(255, 255, 255);
 
                     i1++;
                 
             }
-            con.Close();
+           
 
+
+            //Accumulate activity hrs then subtract to sleeptime
+            double hrsActivity=0;
+            
+            for (int z = 0; z < listProcess.Count; z++)
+            {
+                hrsActivity =hrsActivity+ listTimeAmount[z];
+            }
+            double hrsSleep = 24 - hrsActivity;
+            //piechart sleep
+            pieChart.Series["s1"].Points.AddXY("Rest/Sleep", Math.Round(((hrsSleep / 24) * 100), 1));
+            pieChart.Series["s1"].IsValueShownAsLabel = true;
+            pieChart.Series["s1"].LabelBackColor = Color.FromArgb(255, 255, 255);
+            con.Close();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
