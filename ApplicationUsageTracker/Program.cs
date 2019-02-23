@@ -5,6 +5,7 @@ using System.Windows.Forms;
 
 namespace ApplicationUsageTracker
 {
+   
     static class Program
     {
         /// <summary>
@@ -16,6 +17,7 @@ namespace ApplicationUsageTracker
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-        }
+
+           
     }
-}
+}}
