@@ -1,0 +1,14 @@
+C:\Users\Victorio\AppData\Local\Temporary Projects\ApplicationUsageTracker\bin\Debug\ApplicationUsageTracker.exe
+C:\Users\Victorio\AppData\Local\Temporary Projects\ApplicationUsageTracker\bin\Debug\ApplicationUsageTracker.pdb
+C:\Users\Victorio\AppData\Local\Temporary Projects\ApplicationUsageTracker\obj\x86\Debug\ApplicationUsageTracker.Form1.resources
+C:\Users\Victorio\AppData\Local\Temporary Projects\ApplicationUsageTracker\obj\x86\Debug\ApplicationUsageTracker.Properties.Resources.resources
+C:\Users\Victorio\AppData\Local\Temporary Projects\ApplicationUsageTracker\obj\x86\Debug\ApplicationUsageTracker.csproj.GenerateResource.Cache
+C:\Users\Victorio\AppData\Local\Temporary Projects\ApplicationUsageTracker\obj\x86\Debug\ApplicationUsageTracker.exe
+C:\Users\Victorio\AppData\Local\Temporary Projects\ApplicationUsageTracker\obj\x86\Debug\ApplicationUsageTracker.pdb
+C:\Users\Victorio\documents\visual studio 2010\Projects\ApplicationUsageTracker\ApplicationUsageTracker\obj\x86\Debug\ApplicationUsageTracker.exe
+C:\Users\Victorio\documents\visual studio 2010\Projects\ApplicationUsageTracker\ApplicationUsageTracker\obj\x86\Debug\ApplicationUsageTracker.pdb
+C:\Users\Victorio\documents\visual studio 2010\Projects\ApplicationUsageTracker\ApplicationUsageTracker\bin\Debug\ApplicationUsageTracker.exe
+C:\Users\Victorio\documents\visual studio 2010\Projects\ApplicationUsageTracker\ApplicationUsageTracker\bin\Debug\ApplicationUsageTracker.pdb
+C:\Users\Victorio\documents\visual studio 2010\Projects\ApplicationUsageTracker\ApplicationUsageTracker\obj\x86\Debug\ApplicationUsageTracker.Form1.resources
+C:\Users\Victorio\documents\visual studio 2010\Projects\ApplicationUsageTracker\ApplicationUsageTracker\obj\x86\Debug\ApplicationUsageTracker.Properties.Resources.resources
+C:\Users\Victorio\documents\visual studio 2010\Projects\ApplicationUsageTracker\ApplicationUsageTracker\obj\x86\Debug\ApplicationUsageTracker.csproj.GenerateResource.Cache
